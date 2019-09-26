@@ -34,4 +34,4 @@ Por último le insertaremos enlaces a las imágenes que nos lleven a su respecti
 
 ![8](img/8_insertar_enlace.png)
 
-Y así queda finalmente: [Mis series](alu5820.me/series/)
+Y así queda finalmente: [Mis series](http://alu5820.me/series/)
