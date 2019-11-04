@@ -10,12 +10,12 @@ d =  2 * r
 p = 2 * pi * r
 a = pi *(r ** 2)
 if eleccion == 1:
-    print(d)
-if eleccion == 2:
-    print(p)
-if eleccion == 3:
-    print(a)
-if eleccion == 4:
+    print('Diámetro', d)
+elif eleccion == 2:
+    print('Perímetro', p)
+elif eleccion == 3:
+    print('Área', a)
+elif eleccion == 4:
     sys.exit()
 else:
     print('Error, selecciona una opción válida')
