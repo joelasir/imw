@@ -1,0 +1,10 @@
+server {
+    server_name vm.alu6450.me;
+	 root /home/alu6450/webapps/vmweb/templates/index.html;
+    location / {
+        uwsgi_pass 127.0.0.1:5000;
+        include uwsgi_params;
+    }
+	
+}
+

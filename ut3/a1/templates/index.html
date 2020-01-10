@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>...</title>
+        <link rel='stylesheet' type='text/css' href='../static/style.css'/>
+    </head>
+    <body>
+      <div class="contenedor">
+        <div class="azkaban">
+
+          <h1>{{ vmachine.name }}</h1>
+          <h2>{{ vmachine.os }}</h2>
+
+          <div class="status">
+            <p> {{ vmachine.get_status() }}</p>
+            <div class="botones">
+              <a href="/change_status/0">Parar</a> &nbsp <a href="/change_status/1">Arrancar</a> &nbsp <a href="/change_status/2">Suspender</a>
+            </div>
+            <div class="table">
+              <table style="heigh:100%,width:100%" border="1px" cellspacing="0">
+                <tr>
+                  <td width="120" height="40"></td>
+                  <td width="120"><b>Total</b></td>
+                  <td width="120">%Usado</td>
+                </tr>
+                <tr>
+                  <td>RAM</td>
+                  <td>{{ vmachine.ram }}GB</td>
+                  <td>{{ vmachine.ram_usage() }}%</td>
+                </tr>
+                <tr>
+                  <td>CPU</td>
+                  <td>{{ vmachine.cpu }}Ghz</td>
+                  <td>{{ vmachine.cpu_usage() }}%</td>
+                </tr>
+                <tr>
+                  <td>HDD</td>
+                  <td>{{ vmachine.hdd }}MB</td>
+                  <td>{{ vmachine.hdd_usage() }}%</td>
+                </tr>
+              </div>
+              </table>
+            </div>
+            <br>
+            <p><a href="/run_process">Lanzar proceso</a></p>
+          </div>
+          <br>
+          {% for proc in vmachine.get_processes() %}
+          <div class="caja1">
+            <h3>Proceso {{proc.pid}}</h3>
+            <p>RAM {{ proc.ram }} | CPU {{ proc.cpu }} | HDD {{ proc.hdd }}</p>
+          </div>
+          {% endfor %}
+        </div>
+    </body>
+
+</html>

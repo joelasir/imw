@@ -1,0 +1,17 @@
+body {width: 100%; margin: auto}
+
+.contenedor {width: 1300px; height: 600px; grey; padding-left: 50px; padding-top: 50px}
+
+.azkaban {float: left; width: 500px; height: 400px; padding-left: 5px  ; border-radius: 5%; box-shadow: 0px 0px 3px 3px ; background-color: lightblue}
+
+.azkaban h1 {text-align: center; color: black; padding-top: 20px}
+.azkaban h2 {text-align: center; color: black}
+
+.status {padding-left: 32px; }
+.botones {margin-bottom: 10px;}
+
+.table tr {margin-top: 30px; text-align: center;}
+.table td {text-align: center; border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
+    border-left: 0px;}
