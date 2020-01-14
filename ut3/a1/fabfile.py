@@ -1,7 +1,7 @@
 from fabric.api import env, cd, local, run
 
 
-env.hosts = ['vm.alu6450.me']
+env.hosts = ['vm.alu5820.me']
 
 
 def deploy():
