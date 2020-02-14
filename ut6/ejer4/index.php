@@ -17,13 +17,14 @@
         if (isset($_POST["row"]) and isset($_POST["column"])) {
         $row = $_POST["row"];
         $column = $_POST["column"];
+        echo("<style>td {padding:15px;}</style>");
           if ($row >= 1 and $column >= 1) {
             $f = 1;
             $c = 1;
             while ($f <= $row) {
               echo("<tr>");
               while ($c <= $column) {
-                echo("<td>$f,$c</td>");
+                echo("<td></td>");
                 $c++;
               }
               $f++;
